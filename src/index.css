@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@layer utilities{
+    .place-center{
+        @apply flex justify-center items-center
+    }
+    
+    .head-text{
+        @apply uppercase font-semibold
+    }
+
+    .absolute-horizontal-center{
+        @apply absolute left-[50%] translate-x-[-50%]
+    }
+
+    .animated{
+        @apply transition-all ease-in-out duration-300
+    }
+
+    .flex-box{
+        @apply flex justify-around items-center
+    }
+
+    .flex-between{
+        @apply flex justify-between items-center
+    }
+
+    .alarm-stop-layer{
+        @apply bg-[#000814] w-screen h-screen fixed left-0 top-0 z-20
+    }
+}
+
+@layer components{
+    .btn{
+        background-color: var(--ternary-color);
+        padding: 0.4rem 2rem;
+        border-radius: var(--radius-lg);
+        color: var(--color-white);
+        box-shadow: var(--shadow-lg);
+        cursor: pointer;
+    }
+
+    .clock-card{
+        border-radius: var(--radius-sm);
+        box-shadow: var(--shadow-2xl);
+        height: 80vh;
+        width: 25vw;
+        min-width: 20rem;
+        background-color: #ffffff;
+        padding: 0.5rem 1.2rem;
+        position: relative;
+    }
+
+    .alarm-item-body{
+        background-color: var(--secondary-color);
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        padding: 0.8rem;
+        border-bottom-right-radius: var(--radius-3xl);
+        border-bottom-left-radius: var(--radius-3xl);
+    }
+}
+
+@layer theme{
+    :root{
+        --primary-color: #003049;
+        --secondary-color:#023e8a;
+        --ternary-color: #669bbc;
+        --header-color: #001219;
+    }
+}
