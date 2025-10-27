@@ -14,9 +14,9 @@ const Header = () => {
       <h2 className='head-text text-white text-xl'>wakemate</h2>
 
       {/* haven't implemented it (Optional) */}
-      <nav>
+      {/* <nav>
         <p onClick={toggleTheme} className='text-white text-2xl cursor-pointer'>{isDark ? <CiLight/> : <CiDark/>}</p>
-      </nav>
+      </nav> */}
     </header>
   )
 }
